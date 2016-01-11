@@ -28,8 +28,50 @@ public class TriangleTest {
 
   @Test
   public void isTriangle_whenNotATriangle_false() {
-    Triangle testTriangle = new Triangle(2, 2, 8);
+    Triangle testTriangle = new Triangle(1, 2, 3);
     assertEquals(false, testTriangle.isTriangle());
+  }
+
+  @Test
+  public void isTriangle_whenATriangle_true() {
+    Triangle testTriangle = new Triangle(2, 2, 2);
+    assertEquals(true, testTriangle.isTriangle());
+  }
+
+  @Test
+  public void isScalene_whenTriangleIsNotScalene_false() {
+    Triangle testTriangle = new Triangle(2, 3, 2);
+    assertEquals(false, testTriangle.isScalene());
+  }
+
+  @Test
+  public void isScalene_whenTriangleIsScalene_true() {
+    Triangle testTriangle = new Triangle(2, 3, 4);
+    assertEquals(true, testTriangle.isScalene());
+  }
+
+  @Test
+  public void isIsosceles_whenTriangleIsNotIsosceles_false() {
+    Triangle testTriangle = new Triangle(3, 4, 5);
+    assertEquals(false, testTriangle.isIsosceles());
+  }
+
+  @Test
+  public void isIsosceles_whenTriangleIsIsosceles_true() {
+    Triangle testTriangle = new Triangle(2, 2, 5);
+    assertEquals(true, testTriangle.isIsosceles());
+  }
+
+  @Test
+  public void isEquilateral_whenTriangleIsNotEquilateral_false() {
+    Triangle testTriangle = new Triangle(2, 2, 5);
+    assertEquals(false, testTriangle.isEquilateral());
+  }
+
+  @Test
+  public void isEquilateral_whenTriangleIsEquilateral_true() {
+    Triangle testTriangle = new Triangle(5, 5, 5);
+    assertEquals(true, testTriangle.isEquilateral());
   }
 
 }

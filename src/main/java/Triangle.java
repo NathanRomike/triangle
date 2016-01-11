@@ -24,9 +24,34 @@ public class Triangle {
 
   public boolean isTriangle() {
     if ((mSideA + mSideB > mSideC) && (mSideB + mSideC > mSideA) && (mSideC + mSideA > mSideB)) {
-      return false;
-    } else {
       return true;
+    } else {
+      return false;
     }
   }
+
+  public boolean isScalene() {
+    if ((mSideA != mSideB) && (mSideB != mSideC) && (mSideC != mSideA)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isIsosceles() {
+    if ((mSideA == mSideB) || (mSideB == mSideC) || (mSideC == mSideA)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isEquilateral() {
+    if ((mSideA == mSideB) && (mSideB == mSideC) && (mSideC == mSideA)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }

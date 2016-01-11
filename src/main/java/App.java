@@ -13,7 +13,6 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      //model.put("username", request.session().attribute("username"));
 
       model.put("template", "templates/home.vtl");
       return new ModelAndView(model, layout);

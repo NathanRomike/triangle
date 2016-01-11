@@ -27,6 +27,14 @@ public class AppTest extends FluentTest {
       assertThat(pageSource()).contains("Triangle Tracker");
     }
 
-    
+    @Test
+    public void isNotATriangle() {
+      goTo("http://localhost:4567/");
+      fill("#sideA").with("1");
+      fill("#sideB").with("2");
+      fill("#sideC").with("3");
+      submit(".btn");
+      assertThat(pageSource()).contains("triangle");
+    }
 
 }

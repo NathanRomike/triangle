@@ -1,0 +1,23 @@
+<p><h3>Side A is $myTriangle.getSideA() units long.</h3></p>
+<p><h3>Side B is $myTriangle.getSideB() units long.</h3></p>
+<p><h3>Side C is $myTriangle.getSideC() units long.</h3></p>
+
+#if (!$myTriangle.isTriangle())
+  <p><h3>You did not enter a valid triangle. Remember, the sum of the side lengths of any 2 sides of a triangle must exceed the length of the third side! (a + b > c)</h3></p>
+
+#elseif ($myTriangle.isEquilateral())
+  <p><h3>Hey! Cool! You made a triangle!</h3></p>
+  <p><h3>Your triangle is an equilateral triangle! That means that all sides have the same length.</h3></p>
+
+#elseif ($myTriangle.isIsosceles())
+  <p><h3>Hey! Cool! You made a triangle!</h3></p>
+  <p><h3>Your triangle is an isosceles triangle! That means that two sides have the same length.</h3></p>
+
+#elseif ($myTriangle.isScalene())
+  <p><h3>Hey! Cool! You made a triangle!</h3></p>
+  <p><h3>Your triangle is a scalene triangle! That means that all the sides have different lengths. How funky!</h3></p>
+
+#else
+  <p>What the heck?!</p>
+
+#end
