@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RectangleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-01-11T17:21:27" hostname="epicodus-29.local" time="0.003">
+  <properties/>
+  <testcase name="isSquare_allSidesEqual_true" classname="RectangleTest" time="0.001"/>
+  <testcase name="newRectangle_instantiatesCorrectly" classname="RectangleTest" time="0.0"/>
+  <testcase name="isSquare_whenNotASquare_false" classname="RectangleTest" time="0.001"/>
+  <testcase name="newRectangle_setsWidth" classname="RectangleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

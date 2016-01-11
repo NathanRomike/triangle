@@ -1,11 +1,29 @@
+import org.fluentlenium.adapter.FluentTest;
+import org.junit.ClassRule;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class AppTest extends FluentTest {
+  public WebDriver webDriver = new HtmlUnitDriver();
+
+  @Override
+  public WebDriver getDefaultDriver() {
+    return webDriver;
+  }
+
+  @ClassRule
+  public static ServerRule server = new ServerRule();
 
   @Test
-  public void coinCombo_shouldGiveCoinCombo75Cents_3Quarters() {
-    App app = new App();
-    String coinResult = "Here's what'cha got: 3 quarters, no dimes, no nickels, and no pennies.";
-    assertEquals(coinResult, app.coinCombo(75));
-  }
+    public void rootTest() {
+      goTo("http://localhost:4567/");
+      assertThat(pageSource()).contains("Square finder");
+    }
+}

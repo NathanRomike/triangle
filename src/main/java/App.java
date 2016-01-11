@@ -13,12 +13,15 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      
       model.put("template", "templates/home.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/results", (request, response) -> {
-      HashMap model = new HashMap();
-      model.put("template", "templates/results.vtl" );
-
-    }
+    // get("/results", (request, response) -> {
+    //   HashMap model = new HashMap();
+    //   model.put("template", "templates/results.vtl" );
+    //
+    // }
+  }
+}
