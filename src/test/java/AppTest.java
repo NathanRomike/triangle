@@ -34,7 +34,7 @@ public class AppTest extends FluentTest {
       fill("#sideB").with("2");
       fill("#sideC").with("3");
       submit(".btn");
-      assertThat(pageSource()).contains("triangle");
+      assertThat(pageSource()).contains("You did not enter a valid triangle.");
     }
 
 }
